@@ -13,6 +13,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "*.{js,jsx,ts,tsx}": [
+    "eslint --fix",
+    "prettier --write",
+    "git add"
+  ]
+},
   "devDependencies": {
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
@@ -25,6 +37,8 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
