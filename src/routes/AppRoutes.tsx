@@ -1,12 +1,19 @@
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
+import { CharactersList } from '../pages/CharactersList/CharactersList';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    children: [ ],
+    children: [ 
+      {
+        path: '/',
+        element: <CharactersList />,
+      },
+      
+    ],
   },
   {
     path: '*',

@@ -1,11 +1,14 @@
 import Navbar from "../Navbar/Navbar"
-import { SearchInput } from "../SearchInput/SearchInput"
+import { Outlet } from 'react-router-dom';
+import { S } from "./styles"
 
 const Layout = () => {
   return (
     <>
       <Navbar />
-      <SearchInput />
+      <S.Container>
+        <Outlet />
+      </S.Container>
     </>
   )
 }
