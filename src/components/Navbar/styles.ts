@@ -5,6 +5,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--colors-light-gray);
 
   width: 100%;
   height: 8.4rem;

@@ -1,6 +1,6 @@
 import './theme/global.css';
 import { AppRoutes } from './routes/AppRoutes';
-import { FavoritesProvider } from './context/FavoriteContext/FavoritesContext';
+import { FavoritesProvider } from './store/FavoriteContext/FavoritesContext';
 
 function App() {
 

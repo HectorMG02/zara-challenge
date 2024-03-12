@@ -40,6 +40,7 @@ const AnimatedContainer = styled.div`
 
 const CharacterName = styled(Text)`
   color: var(--colors-white);
+  text-transform: uppercase;
   z-index: 1;
 `;
 

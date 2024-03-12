@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 import * as media from '../../theme/media-queries';
+import Text from "../../components/Text/Text"
 
 
-const Container = styled.div`
-  position: relative;
-
+const Container = styled.main`
   padding: var(--spacing-48);
   padding-top: var(--spacing-60);
   
   ${media.extraSmallMedia} {
-    padding: var(--spacing-none);
-    padding-top: var(--spacing-none);
+    padding: var(--spacing-16);
+    padding-top: var(--spacing-24);
   }
-
 `;
+
 
 const StyledGrid = styled.ul`
   display: grid;
@@ -30,22 +29,17 @@ const StyledGrid = styled.ul`
   }
 `;
 
-const SpinnerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: var(--spacing-48);
-  padding-top: var(--spacing-24);
-  margin: var(--spacing-none);
-  margin-top: var(--spacing-36);
-  padding: var(--spacing-none);
-  list-style: none;
+
+const CustomText = styled(Text)`
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-36);
 `
+
+
 
 
 export const S = {
     Container,
     StyledGrid,
-    SpinnerContainer,
+    CustomText
 }
