@@ -13,6 +13,7 @@ const StyledInput = styled.input`
   outline: none;
   padding-left: var(--spacing-12);
   color: var(--colors-black);
+  text-transform: uppercase;
 
   &::placeholder {
     text-transform: uppercase;

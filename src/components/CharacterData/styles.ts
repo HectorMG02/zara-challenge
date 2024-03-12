@@ -14,19 +14,19 @@ const StyledHeader = styled.header`
     justify-content: center;
   }
 
-  /* Notched corner */
   &:after {
     content: '';
     position: absolute;
     background-color: var(--colors-white);
 
-    width: 2.4rem;
-    height: 2.4rem;
-    right: -1.2rem;
-    bottom: -1.2rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    right: -1.8rem;
+    bottom: -1.8rem;
     transform: rotate(45deg);
   }
 `;
+
 
 const Container = styled.div`
   display: flex;

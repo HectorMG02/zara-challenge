@@ -6,13 +6,12 @@ import useLogic from './logic';
 
 
 export const FavoritesNavLink: FC = () => {
-
-  const { favorites } = useLogic()
+  const { getFavoritesCount } = useLogic()
 
   return (
     <S.StyledNavLink to='/favorites'>
       <HeartFilledIcon />
-      <Text level='p1'>{favorites.length}</Text>
+      <Text level='p1'>{getFavoritesCount()}</Text>
     </S.StyledNavLink>
   );
 };
