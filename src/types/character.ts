@@ -1,4 +1,5 @@
 import { ListResponse, ResourcesCollection } from './api';
+import { Comic } from './comic';
 
 export type CharactersListResponse = ListResponse<Character>;
 
@@ -9,7 +10,7 @@ export interface Character {
   modified: string;
   thumbnail: Thumbnail;
   resourceURI: string;
-  comics: ResourcesCollection;
+  comics: Comic[];
   series: ResourcesCollection;
   stories: ResourcesCollection;
   events: ResourcesCollection;
