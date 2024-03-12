@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Layout from '../components/Layout/Layout';
 import { CharactersList } from '../pages/CharactersList/CharactersList';
 import FavoritesList from '../pages/FavoritesList/FavoritesList';
+import CharacterDetails from '../pages/CharacterDetails/CharacterDetails';
 
 
 const router = createBrowserRouter([
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
       {
         path: "/favorites",
         element: <FavoritesList />
-      }
+      },
+      {
+        path: '/characters/:id',
+        element: <CharacterDetails />,
+      },
       
     ],
   },
