@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 import Text from '../Text/Text';
 import { IconButton } from '../IconButton/IconButton';
 
-export const StyledLi = styled.li`
+const StyledLi = styled.li`
   display: flex;
   flex-direction: column;
 `;
 
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: flex;
   flex-direction: column;
   flex: 1;
   text-decoration: none;
 `;
 
-export const Thumbnail = styled.img`
+const Thumbnail = styled.img`
   height: 19rem;
   object-fit: cover;
 `;
 
-export const Divider = styled.hr`
+const Divider = styled.hr`
   height: 0.5rem;
   margin: var(--spacing-none);
   border: var(--spacing-none);
   background-color: var(--colors-marvel-red);
 `;
 
-export const AnimatedContainer = styled.div`
+const AnimatedContainer = styled.div`
   height: 0;
   transition: height 400ms ease-in-out;
   background-color: var(--colors-marvel-red);
@@ -38,12 +38,12 @@ export const AnimatedContainer = styled.div`
   right: 0;
 `;
 
-export const CharacterName = styled(Text)`
+const CharacterName = styled(Text)`
   color: var(--colors-white);
   z-index: 1;
 `;
 
-export const StyledIconButton = styled(IconButton)`
+const StyledIconButton = styled(IconButton)`
   z-index: 1;
 
   & svg path {
@@ -51,7 +51,7 @@ export const StyledIconButton = styled(IconButton)`
   }
 `;
 
-export const CharacterInfo = styled.section`
+const CharacterInfo = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,3 +84,14 @@ export const CharacterInfo = styled.section`
     transform: rotate(45deg);
   }
 `;
+
+export const S = {
+  StyledLi,
+  StyledLink,
+  Thumbnail,
+  Divider,
+  AnimatedContainer,
+  CharacterName,
+  StyledIconButton,
+  CharacterInfo,
+}

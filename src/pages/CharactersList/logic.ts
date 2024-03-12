@@ -1,26 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { request } from '../../axios/request'
+import { Character } from "../../types/character";
 
+const getCharacters = async () => {
+    const res = await request.get('/characters', {
+        params: {
+            limit: 50
+        }
+    })
+
+    return {
+        total: res.data?.data?.total,
+        characters: res.data?.data?.results
+    }
+}
 
 const useLogic = () => {
     const [characterName] = useState<string>('')
-    const [characters, ] = useState([
-        {
-            name: "Iron Man",
-            description: "Tony Stark is an industrialist and genius inventor who created a powered suit of armor to save his own life and escape captivity. Later, Stark augments his suit with weapons and other technological devices he designed through his company, Stark Industries.",
-            thumbnail: {
-                path: "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55",
-                extension: "jpg"
-            }
-        }
-    ])
+    const [total, setTotal] = useState<number>(0)
+    const [characters, setCharacters] = useState<Character[]>([])
     
+    useEffect(() => {
+        getCharacters().then((data) => {
+            setCharacters(data.characters)
+            setTotal(data.total)
+        })
+    }
+    , [])
   
 
-
-    
+   
     return {
         characterName,
         characters,
+        total
     };
 }
 
