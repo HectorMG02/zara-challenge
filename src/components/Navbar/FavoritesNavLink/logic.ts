@@ -1,10 +1,16 @@
 import { useFavorites } from "../../../store/FavoriteContext/FavoritesContext";
 
+
 const useLogic = () => {
-    const { favorites }: any = useFavorites();
+    const favorites = useFavorites();
+
+    const getFavoritesCount = () => {
+        if(!favorites) return 0
+        return favorites.favorites.length
+    }
     
     return {
-        favorites
+        getFavoritesCount
     }
 }
 
