@@ -4,6 +4,7 @@ import useLogic from './logic'
 import { CharacterCard } from '../../components/CharacterCard/CharacterCard'
 import { S } from "./styles"
 import { Character } from '../../types/character'
+import ShieldSpinner from '../../components/ShieldSpinner/ShieldSpinner'
 
 export const CharactersList: FC = () => {
   const { characterName, handleSearch, characters, total, loading } = useLogic()
@@ -15,7 +16,7 @@ export const CharactersList: FC = () => {
       
       {loading ? (
         <S.SpinnerContainer>
-          <S.ShieldSpinner />
+          <ShieldSpinner />
         </S.SpinnerContainer>
       ) : (
         <S.StyledGrid>

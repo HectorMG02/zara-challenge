@@ -1,7 +1,7 @@
 import { CharacterCard } from "../../components/CharacterCard/CharacterCard"
 import SearchBar from "../../components/SearchBar/SearchBar"
 import { Character } from "../../types/character"
-import { S } from "../CharactersList/styles"
+import { S } from "./styles"
 import useLogic from "./logic"
 
 const FavoritesList = () => {
@@ -9,6 +9,7 @@ const FavoritesList = () => {
 
   return (
     <S.Container>
+    <S.CustomText level="h2">FAVORITES</S.CustomText>
     <SearchBar value={characterName} onChange={handleSearch} count={total} />
 
     <S.StyledGrid>

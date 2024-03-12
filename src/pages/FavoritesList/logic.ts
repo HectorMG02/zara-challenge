@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Character } from "../../types/character";
-import { useFavorites } from "../../context/FavoriteContext/FavoritesContext";
+import { useFavorites } from "../../store/FavoriteContext/FavoritesContext";
 
 const useLogic = () => {
   const [characterName, setCharacterName] = useState("");
