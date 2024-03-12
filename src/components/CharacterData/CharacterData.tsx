@@ -9,7 +9,7 @@ import Text from '../Text/Text';
 
 const CharacterData: FC<PropTypes> = ({ character }) => {
 
-    const { checkIsFavorite } = useLogic()
+    const { isFavorite, toggleFavoriteCharacter } = useLogic({ character })
 
 
 
@@ -25,7 +25,8 @@ const CharacterData: FC<PropTypes> = ({ character }) => {
               <S.Wrapper>
                 <S.StyledHeading level='h1'>{character.name}</S.StyledHeading>
                 <IconButton 
-                    icon={() => checkIsFavorite(character.id) ? <HeartFilledIcon width={12} height={10.84} /> : <HeartOutlinedIcon width={12} height={10.84} />}
+                    onClick={toggleFavoriteCharacter}
+                    icon={() => isFavorite ? <HeartFilledIcon width={24} height={21.68} /> : <HeartOutlinedIcon width={24} height={21.68} />}
                 />
               </S.Wrapper>
               <Text level='p1'>{character.description}</Text>
