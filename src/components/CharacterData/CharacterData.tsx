@@ -8,10 +8,7 @@ import HeartOutlinedIcon from '../Icons/HeartOutlinedIcon';
 import Text from '../Text/Text';
 
 const CharacterData: FC<PropTypes> = ({ character }) => {
-
     const { isFavorite, toggleFavoriteCharacter } = useLogic({ character })
-
-
 
     return (
         <S.StyledHeader>

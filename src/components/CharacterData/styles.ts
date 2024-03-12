@@ -82,6 +82,9 @@ const Wrapper = styled.div`
 `;
 
 const StyledHeading = styled(Text)`
+  text-transform: uppercase;
+
+
   ${media.lteSmallMedia} {
     ${typography.h2};
   }
