@@ -5,13 +5,24 @@ import Text from '../Text/Text';
 
 
 const StyledSection = styled.section`
-  display: flex;
+   display: flex;
   justify-content: center;
   padding: var(--spacing-48) var(--spacing-none) var(--spacing-24);
 `;
 
 const Container = styled.div`
   width: 100%;
+
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+    background-color: var(--colors-light-gray);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--colors-marvel-red);
+  }
+  
 
   ${media.gteMediumMedia} {
     max-width: 96rem;
@@ -20,7 +31,7 @@ const Container = styled.div`
 
 const StyledHeading = styled(Text)`
   text-transform: uppercase;
-
+  
   ${media.lteSmallMedia} {
     ${typography.h3};
   }

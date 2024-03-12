@@ -14,6 +14,7 @@ const Container = styled.li`
   ${media.lteExtraSmallMedia} {
     width: 16.4rem;
   }
+
 `;
 
 const Image = styled.img`

@@ -6,12 +6,12 @@ import { S } from "./styles"
 
 
 const CharacterDetails = () => {
-  const { characterData, comics } = useLogic()
+  const { characterData, comics, loading } = useLogic()
 
   return (
     <S.Container>
       {
-        characterData ? (
+        !!characterData && !loading ? (
           <>
             <CharacterData character={characterData} />
             <ComicsList comics={comics} />

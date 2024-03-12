@@ -18,16 +18,21 @@ const useLogic = () => {
     const { id }: any = useParams();
     const [ characterData, setCharacterData ] = useState<Character>()
     const [ comics, setComics ] = useState<Comic[]>([])
+    const [ loading, setLoading ] = useState(false)
 
     const loadCharacterData = async (characterId: number) => {
+        setLoading(true)
         await getCharacterData(characterId).then((data) => {
             setCharacterData(data);
+            setLoading(false)
         });
     }
 
     const loadComics = async (characterId: number) => {
+        setLoading(true)
         await getCharacterComics(characterId).then((data: Comic[]) => {
             setComics(data);
+            setLoading(false)
         });
     }
 
@@ -38,7 +43,8 @@ const useLogic = () => {
 
     return {
         characterData,
-        comics
+        comics,
+        loading
     }
 }
 
