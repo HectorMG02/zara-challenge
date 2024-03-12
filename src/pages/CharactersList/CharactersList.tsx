@@ -3,6 +3,7 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 import useLogic from './logic'
 import { CharacterCard } from '../../components/CharacterCard/CharacterCard'
 import { S } from "./styles"
+import { Character } from '../../types/character'
 
 export const CharactersList: FC = () => {
   const { characterName, handleSearch, characters, total, loading } = useLogic()
@@ -18,7 +19,7 @@ export const CharactersList: FC = () => {
         </S.SpinnerContainer>
       ) : (
         <S.StyledGrid>
-          {characters.map((character, index) => (
+          {characters.map((character: Character, index: number) => (
             <CharacterCard key={index} character={character} />
           ))}
         </S.StyledGrid>

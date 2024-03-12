@@ -44,6 +44,7 @@ const CharacterName = styled(Text)`
 `;
 
 const StyledIconButton = styled(IconButton)`
+  margin-right: -8px;
   z-index: 1;
 
   & svg path {
@@ -71,7 +72,6 @@ const CharacterInfo = styled.section`
     fill: var(--colors-white);
   }
 
-  /* Notched corner */
   &:after {
     content: '';
     position: absolute;

@@ -2,10 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import * as media from '../../theme/media-queries';
 
 const Container = styled.div`
-position: relative;
-  padding: var(--spacing-48);
-  padding-top: var(--spacing-8);
-
+  position: relative;
+  
   ${media.extraSmallMedia} {
     padding: var(--spacing-none);
     padding-top: var(--spacing-none);
