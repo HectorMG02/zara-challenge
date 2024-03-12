@@ -51,6 +51,7 @@ const List = styled.ul`
   list-style: none;
   margin: var(--spacing-none);
   padding: var(--spacing-24) var(--spacing-none);
+  padding-bottom: var(--spacing-12);
 
   ${media.smallMedia} {
     & > :first-child {

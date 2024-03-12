@@ -8,6 +8,8 @@ const Container = styled.li`
   display: flex;
   flex-direction: column;
   width: 17.9rem;
+
+  
   ${media.smallMedia} {
     width: 16.9rem;
   }
