@@ -1,16 +1,15 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 
 import { PropTypes } from './types';
 import { S } from './styles';
 import { SearchInput } from '../SearchInput/SearchInput';
+import useLogic from './logic';
 
 const SearchBar: FC<PropTypes> = ({ value, count, ...props }) => {
-  const [inputValue, setInputValue] = useState<string>(value);
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
+  const { 
+    inputValue,
+    setInputValue
+  } = useLogic({value})
 
   return (
     <S.Container {...props}>

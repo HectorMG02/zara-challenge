@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { S } from './styles';
-import HeartFilledIcon from './HeartFilledIcon';
+import HeartFilledIcon from '../../Icons/HeartFilledIcon';
 import Text from '../../Text/Text';
 
 

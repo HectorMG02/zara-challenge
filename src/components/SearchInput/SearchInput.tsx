@@ -1,20 +1,18 @@
-import { ChangeEvent, FC } from 'react';
+import { FC } from 'react';
 import { PropTypes } from './types';
 import { S } from './styles';
 import SearchIcon from './SearchIcon/SearchIcon';
+import useLogic from './logic';
 
 export const SearchInput: FC<PropTypes> = ({ value, onChange, ...props }) => {
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange?.(event.target.value);
-  };
+  const { handleChange } = useLogic({onChange})
 
   return (
     <S.InputWrapper {...props}>
       <SearchIcon />
       <S.StyledInput
         type='search'
-        placeholder="Buscar personaje por nombre"
-        aria-label="Buscar personaje por nombre"
+        placeholder="SEARCH A CHARACTER..."
         value={value}
         onChange={handleChange}
       />
