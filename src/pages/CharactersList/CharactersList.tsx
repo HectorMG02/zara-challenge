@@ -5,11 +5,11 @@ import { CharacterCard } from '../../components/CharacterCard/CharacterCard'
 import { S } from "./styles"
 
 export const CharactersList: FC = () => {
-  const { characterName, characters, total } = useLogic()
+  const { characterName, handleSearch, characters, total } = useLogic()
 
   return (
     <S.Container>
-      <SearchBar value={characterName} count={total} />
+      <SearchBar value={characterName} onChange={handleSearch} count={total} />
 
       <S.StyledGrid>
         {

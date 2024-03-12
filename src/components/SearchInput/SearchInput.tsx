@@ -5,7 +5,7 @@ import SearchIcon from './SearchIcon/SearchIcon';
 import useLogic from './logic';
 
 export const SearchInput: FC<PropTypes> = ({ value, onChange, ...props }) => {
-  const { handleChange } = useLogic({onChange})
+  const { handleChange } = useLogic({ onChange })
 
   return (
     <S.InputWrapper {...props}>
