@@ -9,8 +9,8 @@ const Container = styled.div`
   padding-top: var(--spacing-60);
   
   ${media.extraSmallMedia} {
-    padding: var(--spacing-none);
-    padding-top: var(--spacing-none);
+    padding: var(--spacing-12);
+    margin-top: var(--spacing-24);
   }
 
 `;
