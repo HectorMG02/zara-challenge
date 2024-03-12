@@ -59,6 +59,7 @@ const CharacterInfo = styled.section`
   flex: 1;
   position: relative;
   background-color: var(--colors-black);
+  cursor: default;
 
   box-sizing: border-box;
   padding: var(--spacing-16) var(--spacing-16) var(--spacing-24) var(--spacing-16);
