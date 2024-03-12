@@ -20,13 +20,19 @@ const useLogic = () => {
     const [characterName, setCharacterName] = useState<string>('')
     const [total, setTotal] = useState<number>(0)
     const [characters, setCharacters] = useState<Character[]>([])
+    const [loading, setLoading] = useState<boolean>(false);
+
     
     const loadCharacters = async (nameStartsWith = "") => {
+        setLoading(true);
         await getCharacters(nameStartsWith).then((data) => {
-            setCharacters(data.characters)
-            setTotal(data.total)
-        })
-    }
+            setCharacters(data.characters);
+            setTotal(data.total);
+        }).finally(() => {
+            setLoading(false);
+        });
+    };
+    
 
     useEffect(() => {
        loadCharacters()
@@ -44,8 +50,10 @@ const useLogic = () => {
         characterName,
         handleSearch,
         characters,
-        total
+        total,
+        loading, 
     };
+    
 }
 
 export default useLogic;
