@@ -26,7 +26,7 @@ export const CharacterCard: FC<PropTypes> = ({ character }) => {
           <S.AnimatedContainer />
           <S.CharacterName level='p2'>{character.name}</S.CharacterName>
            <S.StyledIconButton 
-              onClick={toggleFavoriteCharacter()} 
+              onClick={toggleFavoriteCharacter} 
               icon={() => isFavorite ? <HeartFilledIcon width={12} height={10.84} /> : <HeartOutlinedIcon width={12} height={10.84} />}
             />
           </S.CharacterInfo>
