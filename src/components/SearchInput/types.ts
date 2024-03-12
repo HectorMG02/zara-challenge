@@ -1,4 +1,4 @@
 export interface PropTypes {
     value?: string;
-    onChange?: (value: string) => void;
+    onChange: (value: string) => void;
   }

@@ -1,4 +1,5 @@
 export interface PropTypes {
     value: string;
-    count: number;
+    onChange: (value: string) => void;
+    count?: number;
 }

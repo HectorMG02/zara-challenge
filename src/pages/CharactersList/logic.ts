@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { request } from '../../axios/request'
 import { Character } from "../../types/character";
 
-const getCharacters = async () => {
+const getCharacters = async (characterName: string) => {
     const res = await request.get('/characters', {
         params: {
-            limit: 50
+            limit: 50,
+            nameStartsWith: characterName || undefined
         }
     })
 
@@ -16,25 +17,43 @@ const getCharacters = async () => {
 }
 
 const useLogic = () => {
-    const [characterName] = useState<string>('')
+    const [characterName, setCharacterName] = useState<string>('')
     const [total, setTotal] = useState<number>(0)
     const [characters, setCharacters] = useState<Character[]>([])
+    const [loading, setLoading] = useState<boolean>(false);
+
     
+    const loadCharacters = async (nameStartsWith = "") => {
+        setLoading(true);
+        await getCharacters(nameStartsWith).then((data) => {
+            setCharacters(data.characters);
+            setTotal(data.total);
+        }).finally(() => {
+            setLoading(false);
+        });
+    };
+    
+
     useEffect(() => {
-        getCharacters().then((data) => {
-            setCharacters(data.characters)
-            setTotal(data.total)
-        })
+       loadCharacters()
     }
     , [])
   
 
+    const handleSearch = (value: string) => {
+        setCharacterName(value)
+        loadCharacters(value)
+    }
+
    
     return {
         characterName,
+        handleSearch,
         characters,
-        total
+        total,
+        loading, 
     };
+    
 }
 
 export default useLogic;
