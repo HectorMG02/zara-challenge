@@ -4,7 +4,7 @@ import * as media from '../../theme/media-queries';
 const Container = styled.div`
 position: relative;
   padding: var(--spacing-48);
-  padding-top: var(--spacing-60);
+  padding-top: var(--spacing-8);
 
   ${media.extraSmallMedia} {
     padding: var(--spacing-none);
