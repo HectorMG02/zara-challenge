@@ -1,6 +1,11 @@
-const useLogic = () => {
+import { useFavorites } from "../../../context/FavoriteContext/FavoritesContext";
 
-    return {}
+const useLogic = () => {
+    const { favorites }: any = useFavorites();
+    
+    return {
+        favorites
+    }
 }
 
 export default useLogic;

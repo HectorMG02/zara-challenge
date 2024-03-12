@@ -7,12 +7,12 @@ import useLogic from './logic';
 
 export const FavoritesNavLink: FC = () => {
 
-  const { } = useLogic()
+  const { favorites } = useLogic()
 
   return (
     <S.StyledNavLink to='/favorites'>
       <HeartFilledIcon />
-      <Text level='p1'>0</Text>
+      <Text level='p1'>{favorites.length}</Text>
     </S.StyledNavLink>
   );
 };
