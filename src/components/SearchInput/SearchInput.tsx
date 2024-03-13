@@ -15,6 +15,7 @@ export const SearchInput: FC<PropTypes> = ({ value, onChange, ...props }) => {
         placeholder="SEARCH A CHARACTER..."
         value={value}
         onChange={handleChange}
+        data-testid="search-input"
       />
     </S.InputWrapper>
   );
