@@ -54,3 +54,6 @@ Por último tenemo las carpetas **tests** y **types**. En la primera están defi
 - [**crypto-js**](https://www.npmjs.com/package/crypto-js): Para generar el hash necesario para realizar las llamadas a la API de Marvel.
 - [**react-router-dom**](https://www.npmjs.com/package/react-router-dom): Para manejar las rutas de la aplicación.
 - [**vitest**](https://www.npmjs.com/package/vitest): Para realizar las pruebas de los componentes.
+
+### 🚀 Despliegue
+La aplicación está desplegada en Vercel y puedes verla en el siguiente enlace: [ZARA Challenge](https://zara-challenge-opal.vercel.app/)
