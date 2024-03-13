@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Character } from "../../types/character";
 import { useFavorites } from "../../store/FavoriteContext/FavoritesContext";
+import { PropTypes } from "./types";
 
 
-const useLogic = ({ character }: { character: Character }) => {
+const useLogic = ({ character }: PropTypes) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const favoritesContext = useFavorites();
 

@@ -3,7 +3,7 @@ import { Character } from '../../types/character';
 import { FavoritesContextType } from './types';
 
 
-const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
+export const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 
 
 export const useFavorites = () => useContext(FavoritesContext);

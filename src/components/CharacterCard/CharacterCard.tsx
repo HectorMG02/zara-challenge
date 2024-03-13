@@ -4,14 +4,9 @@ import HeartFilledIcon from '../Icons/HeartFilledIcon';
 
 import useLogic from './logic';
 import HeartOutlinedIcon from '../Icons/HeartOutlinedIcon';
-
-
-interface PropTypes {
-  character: any;
-}
+import { PropTypes } from './types';
 
 export const CharacterCard: FC<PropTypes> = ({ character }) => {
-
   const { isFavorite, toggleFavoriteCharacter } = useLogic({ character });
 
   return (

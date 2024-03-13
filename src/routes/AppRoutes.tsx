@@ -22,7 +22,6 @@ const router = createBrowserRouter([
         path: '/characters/:id',
         element: <CharacterDetails />,
       },
-      
     ],
   },
   {

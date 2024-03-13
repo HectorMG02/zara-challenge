@@ -9,9 +9,12 @@ export const FavoritesNavLink: FC = () => {
   const { getFavoritesCount } = useLogic()
 
   return (
-    <S.StyledNavLink to='/favorites'>
+    <S.StyledNavLink to='/favorites' 
+      data-testid='favorites-count'
+    >
       <HeartFilledIcon />
-      <Text level='p1'>{getFavoritesCount()}</Text>
+      <Text 
+      level='p1'>{getFavoritesCount()}</Text>
     </S.StyledNavLink>
   );
 };

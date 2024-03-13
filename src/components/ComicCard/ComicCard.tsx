@@ -2,12 +2,10 @@ import { FC } from 'react';
 import { PropTypes } from './types';
 import { S } from './styles';
 import Text from '../Text/Text';
-
-const RELEASE_DATE = 'onsaleDate';
+import useLogic from './logic';
 
 export const ComicCard: FC<PropTypes> = ({ comic }) => {
-  const releaseDate = comic.dates.find((date) => date.type === RELEASE_DATE);
-  const releaseYear = releaseDate && new Date(releaseDate?.date).getFullYear();
+  const { releaseYear } = useLogic({ comic })
 
   return (
     <S.Container>
